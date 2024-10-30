@@ -23,7 +23,13 @@ h1 {
     width: 100%;
     color: white;
     background: var(--background);
-    animation: h1 4s steps(var(--steps)) forwards,
-      caret 1s infinite;
+    animation: h1 4s steps(var(--steps)) forwards, caret 1s infinite;
   }
+}
+// Animation
+@keyframes h1 {
+	to { width: 0 }
+}
+@keyframes caret {
+	50% { color: transparent }
 }
