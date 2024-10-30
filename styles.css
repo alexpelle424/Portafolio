@@ -33,3 +33,28 @@ h1 {
 @keyframes caret {
 	50% { color: transparent }
 }
+.typing {
+  // Text style
+  font-family: 'Inconsolata', Consolas, monospace;
+	font-size: 6vw;
+	color: #d7b94c;
+  // Core styles
+  position: relative;
+	&::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: white;
+    background: var(--background);
+    animation: typing 4s steps(var(--steps)) forwards,
+      caret 1s infinite;
+  }
+}
+// Animation
+@keyframes typing {
+	to { width: 0 }
+}
+@keyframes caret {
+	50% { color: transparent }
+}
