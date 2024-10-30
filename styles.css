@@ -8,6 +8,14 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
+// Animation
+@keyframes typing {
+	to { width: 0 }
+}
+@keyframes caret {
+	50% { color: transparent }
+}
+
 }
 body{
     background-color: #e7e5e4;
