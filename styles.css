@@ -9,10 +9,10 @@ h1 {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 // Animation
-@keyframes typing {
+@keyframes h1 {
 	to { width: 0 }
 }
-@keyframes caret {
+@keyframes h1 {
 	50% { color: transparent }
 }
 
