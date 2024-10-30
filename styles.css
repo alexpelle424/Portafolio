@@ -26,3 +26,4 @@ h1 {
     animation: h1 4s steps(var(--steps)) forwards,
       caret 1s infinite;
   }
+}
