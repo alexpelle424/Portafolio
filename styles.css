@@ -1,117 +1,313 @@
-body{
-    background-image:         
-    radial-gradient(
-          farthest-corner circle at 100% 0%,
-          #00dfff 0%, #8c00ea 100%
-        );
-      z-index: 1;
-      position: relative;
-}
-
-/*el fox debe moverse con el scroll*/
-.fox{
-    z-index: 1000000;
-    position: relative;
-    padding: 10px;
-    width: 10%;
-    margin-left: -760px;
-    margin-top: -100px;
-    rotate: 25grad;
-}
-/*las cards deben tener un efecto hover*/
-.cards {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 26px;
-  box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
-              inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6),
-              inset 0px 11px 28px 0px rgb(255, 255, 255);
-  width: 25%;
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-  float: left;
-  margin: 10px;
-  transition: all 0.4s ease;
-  overflow: hidden; /* Oculta el contenido extra al estar en estado no expandido */
-  cursor: pointer;
-}
-
-.cards:hover {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-              inset 0px 8px 16px rgba(255, 255, 255, 0.6);
-}
-
-.cards.expanded {
-  width: 50%; /* Expande el ancho al hacer clic */
-}
-
-.extra-info {
-  display: none; /* Oculta la sección extra inicialmente */
-  padding: 10px;
-  font-size: 16px;
-  background-color: rgba(240, 240, 240, 0.9);
-}
-
-.cards.expanded .extra-info {
-  display: block; /* Muestra la sección extra cuando la tarjeta está expandida */
-}
-
-.text-card{
-   text-decoration: solid;
-   font-size: 20px;
-   font-family: "Avant Garde";
-   padding: 20px 30px;
-   text-align: center;
-}
-.text-card .button{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-}
-.text-card .button a svg{
-  padding-left: 100px;
-}
-h1 {
+body {
+  background-image: radial-gradient(
+      farthest-corner circle at 100% 0%,
+      #00dfff 0%, #8c00ea 100%
+  );
+  border: 0;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: azure;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.938);
+  box-shadow: 0 10px 10px rgb(0 0 0 / 50%);
+}
+header.scrolled .nav a {
+  color: white;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
+}
+.wrapper {
+  margin-top: 10vw;
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+.parr{
+  font-size: xx-large;
+  margin: 7px;
+}
+.typing-demo {
+  width: 13ch;
+  animation: typing 2s steps(10), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 15px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+h1 {
   font-size: 92px;
   padding: 80px 50px;
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .title {
-    color: #2c2c2c;
-    letter-spacing: .05em;
-    text-shadow: 
-      4px 4px 0px #d5d5d5, 
-      7px 7px 0px rgba(0, 0, 0, 0.2);
+  color: #2c2c2c;
+  letter-spacing: .05em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
-/*.div.acerca.de.mi h1{
-  
+.title img{
+  width: 10vw;
+}
+.desktop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav a {
+  text-decoration: none;
+  margin: 0px 10px 0px 68px;
+  color: #00122c;
+  font-size: 3vw;
+}
+/*.contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }*/
+/*
+.contenedor .card {
+  cursor: pointer;
+  margin: 1em;
+  padding: 1em;
+  border-style: double;
+  border-color: black;
+  box-shadow: 10px 10px 5px darkblue;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  text-align: center;
+}
+*/
 
-
-/* Media query para pantallas chicas de telefonos*/
-@media (max-width: 700px){
-  .cards{
-    backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 1); border-radius: 26px; box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);    
-    width: 40%;
-    display: flex;
-    float: left;
-    margin: 10px;
-  }
-  .fox{
-    z-index: 1000000;
-    position: relative;
-    padding: -10px;
-    width: 10%;
-    margin-left: -554px;
-    rotate: 25grad;
+/* Oculta inicialmente el párrafo */
+.contenedor .card .slide.slide2 .content p {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Animación suave */
 }
 
+/* Al hacer hover sobre la tarjeta, muestra el párrafo */
+.contenedor .card:hover .slide.slide2 .content p {
+  opacity: 1;
+}
+
+.contenedor .card{
+  margin: 1vw;
+}
+.contenedor .card a{
+  text-decoration: none;
+}
+.contenedor .card .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00122c;
+  display: flex;
+  text-align: center;
+  color: azure;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+}
+
+
+
+.contenedor .card .slide {
+
+  width: 255px;
+  height: 275px;
+  transition: 0.5s;
+
+}
+
+.contenedor .card .slide.slide1 {
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1;
+
+  transition: .7s;
+
+  transform: translateY(100px);
+
+}
+
+.contenedor .card:hover .slide.slide1{
+
+  transform: translateY(0px);
+
+}
+
+.contenedor .card .slide.slide2 {
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  transition: .8s;
+
+  transform: translateY(-100px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+}
+
+.contenedor .card:hover .slide.slide2{
+
+  transform: translateY(0);
+
+}
+
+.contenedor .card .slide.slide2::after{
+
+  content: "";
+
+  position: absolute;
+
+  width: 30px;
+
+  height: 4px;
+
+  bottom: 15px;
+
+  left: 50%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #2c73df;
+
+}
+
+.contenedor .card .slide.slide2 .content p {
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: center;
+
+  color: #414141;
+
+}
+
+.contenedor .card .slide.slide2 .content h3 {
+
+  margin: 0 0 10px 0;
+
+  padding: 0;
+
+  font-size: 24px;
+
+  text-align: center;
+
+  color: #414141;
+
+} 
+
+
+.contenedor img {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* El ancho máximo de las imágenes */
+  transition: transform 0.4s ease;
+  display: block; /* Asegura que no haya espacios en línea */
+}
+
+
+.proyecto {
+  max-width: 400px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.proyecto img {
+  max-width: 400px;
+}
+
+/* Media query para pantallas chicas de teléfonos */
+@media (max-width: 700px) {
+  h1 {
+      font-size: 48px;
+      padding: 40px 20px;
+  }
+
+  .contenedor a {
+      margin: 0.5em;
+      padding: 0.5em;
+  }
+
+  .contenedor img {
+      max-width: 100%;
+      width: 80%;
+  }
 }
