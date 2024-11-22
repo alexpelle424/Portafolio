@@ -294,20 +294,57 @@ h1 {
   max-width: 400px;
 }
 
-/* Media query para pantallas chicas de teléfonos */
+/* Media query para pantallas de 700px o menos */
 @media (max-width: 700px) {
-  h1 {
-      font-size: 48px;
-      padding: 40px 20px;
+  body {
+    font-size: 90%; /* Escala general del texto */
   }
 
-  .contenedor a {
-      margin: 0.5em;
-      padding: 0.5em;
+  header {
+    padding: 10px 5px;
   }
+
+  h1 {
+    font-size: 36px;
+    padding: 20px 10px;
+  }
+  .typing-demo{
+    width: 14ch;
+  }
+  .desktop{
+    display: flex;
+    flex-direction: column;
+  }
+  .parr {
+    font-size: medium;
+    margin: 5px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .title img {
+    width: 25vw; /* Imagen más pequeña */
+  }
+
+  .nav a {
+    font-size: 7vw; /* Texto más grande para legibilidad */
+    margin: 0 15px; /* Reduce los márgenes */ 
+  }
+
+
 
   .contenedor img {
-      max-width: 100%;
-      width: 80%;
+    max-width: 100%;
+    width: 80%; /* Escala las imágenes */
+  }
+
+  .proyecto {
+    max-width: 90%;
+  }
+
+  .proyecto img {
+    width: 100%; /* Escala las imágenes */
   }
 }

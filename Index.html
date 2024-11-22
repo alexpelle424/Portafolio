@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio-Alexandroid</title>
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="styles.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <header>
+<!--Desktop-->
+    <div class="desktop">
+      <div class="title">
+        <img class="logo" src="svg/logo.jpeg" alt="Logo-Alexandroid">
+      </div>
+      <div class="nav">
+         <a href="#inicio">Inicio</a>
+         <a href="#proyecto">Proyectos</a>
+         <a href="#">Acerca de mi</a>
+         <a href="#">Contacto</a>
+      </div>
+    </div>
+  </header>      
+   <body>
+      <div id="inicio" class="wrapper">
+         <h1 class="typing-demo">
+            Desarrollador</br>
+            Full-stack</h1>
+      </div>
+      <h1 id="proyecto">Proyectos</h1>            
+
+      <div class="contenedor" style="display: flex;flex-direction: row;flex-wrap: wrap;margin: 10px;padding: 10px;">
+      <p class="parr">
+         Estos son mis proyectos que reflejan mi pasión por la tecnología y mi enfoque en crear soluciones prácticas e innovadoras. 
+         Incluyendo desarrollos en videojuegos, sitios web, bases de datos y apps, destacando funcionalidad y atención al detalle.
+      </p>
+         <div class="card">
+            <a href="#">
+            <div class="slide slide1">
+               <div class="content">               
+                  <div class="icon">
+                     <h3>Bot scrapper</h3>
+                     <img class="Bot" src="svg/paint.png" alt="Bot que hace scrapping a Google Maps">
+                  </div>
+               </div>
+            </div>
+            <div class="slide slide2">
+               <div class="content">
+                  <h3>
+                     La FLDSRMDF (o bot scrapper)
+                  </h3>
+                  <p>Este es un bot que hace scrapping a Google Maps para recopilar datos de restaurantes y colocarlos en un Excel online</p>
+               </div>
+            </div>
+            </a>
+         </div>
+         <div class="card">
+            <div class="slide slide1">
+               <div class="content">  
+                  <div class="icon">     
+                     <h3>Gamefox</h3>
+                     <img src="/svg/Gamefox.png" alt="juego estilo pacman inspirado en una empresa llamada fox ordering">
+                  </div>
+               </div>
+            </div>   
+            <div class="slide slide2">                     
+                  <div class="content">               
+                      <h3>
+                          Gamefox
+                      </h3>
+                      <p>Un juego estilo pac-man, inspirado en una empresa llamada Fox Ordering</p>
+                  </div>
+            </div>
+         </div>
+        <div class="card">
+            <a target="_blank" href="https://alexpelle424.github.io/alex/Nueva%20carpeta/Index.html">
+            <div class="slide slide1">
+               <div class="content">
+                  <div class="icon">               
+                     <h3>Website para restaurantes</h3>
+                     <img class="Pagina web" src="svg/Pagina plantilla.png" alt="Plantilla web de un restaurante">
+                  </div>
+               </div>
+            </div>
+            <div class="slide slide2">
+               <div class="content">
+                  <h3>
+                     Plantilla Web 
+                  </h3>
+                  <p>Esto es una plantilla de una página web de restaurante moderno.Creada con un diseño responsivo</p>
+               </div>
+            </div>
+            </a>
+         </div>
+         <div class="card">
+            <a target="_blank" href="http://xalestv.atspace.cc">
+            <div class="slide slide1">
+               <div class="content">
+                  <div class="icon">               
+                     <h3>Xalestv</h3>
+                     <img class="Xalestv" src="/svg/Header.png">
+                  </div>
+               </div>
+            </div>
+            <div class="slide slide2">   
+               <div class="content">
+                  <h3>
+                     Xalestv
+                  </h3>
+                  <p>
+                     Pagina web de peliculas y series con entorno backend, y frontend, utilizando php. Junto con un sistema para agregar series y peliculas
+                  </p>
+               </div>
+            </div>
+            </a>
+         </div>
+         <div class="card">
+            <a target="_blank" class="cursor: 0">
+            <div class="slide slide1">
+               <div class="content">
+                  <div class="icon">               
+                     <h3>Logos</h3>
+                     <img class="Logos" src="svg/logos.png">
+                  </div>
+               </div>
+            </div>
+            <div class="slide slide2">
+               <div class="content">
+                  <h3>
+                     Logos
+                  </h3>
+                  <p>Diseño y creo logos para empresas con programas como Canvas</p>
+               </div>
+            </div>
+            </a>
+         </div>
+      </div>
+
+   </body>
+   <script>
+      window.onscroll = function() {
+          var header = document.querySelector("header");
+          if (window.scrollY > 50) { // Si el scroll es mayor a 50px
+              header.classList.add("scrolled");
+          } else {
+              header.classList.remove("scrolled");
+          }
+      };
+      </script>
+</html>
