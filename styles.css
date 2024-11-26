@@ -4,11 +4,14 @@ body {
       #00dfff 0%, #8c00ea 100%
   );
   border: 0;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: Arial, sans-serif; /* Fallback mientras carga */
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Pixelify Sans';
+  font-display: swap; 
 }
 ::-webkit-scrollbar {
   width: 10px;
