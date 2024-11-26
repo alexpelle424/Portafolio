@@ -4,10 +4,10 @@ body {
       #00dfff 0%, #8c00ea 100%
   );
   border: 0;
-  font-family: Arial, sans-serif; /* Fallback mientras carga */
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Pixelify Sans', Arial, sans-serif; /* Fallback mientras carga */
+  font-optical-sizing: auto; /* Permite ajustes ópticos si está disponible */
+  font-weight: bold; /* Ajusta según el peso */
+  font-style: normal; /* Define el estilo base */
 }
 @font-face {
   font-family: 'Pixelify Sans';
