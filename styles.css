@@ -9,6 +9,17 @@ body {
   font-weight: bold; /* Ajusta según el peso */
   font-style: normal; /* Define el estilo base */
 }
+h2{
+    font-size: 92px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
 @font-face {
   font-family: 'Pixelify Sans';
   font-display: swap; 
