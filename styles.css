@@ -26,8 +26,9 @@ body {
 }
 
 header.scrolled {
-  background-color: rgba(0, 0, 0, 0.938);
-  box-shadow: 0 10px 10px rgb(0 0 0 / 50%);
+  background-color: rgb(0 0 0 / 25%);
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 50%);
+  backdrop-filter: blur(5px);
 }
 header.scrolled .nav a {
   color: white;
@@ -36,6 +37,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  height: 15%;
   width: 100%;
   z-index: 1000;
   background-color: transparent;
@@ -43,7 +45,7 @@ header {
   box-shadow: none;
 }
 .wrapper {
-  margin-top: 10vw;
+  margin-top: 6vw;
   height: 100vh;
   /*This part is important for centering*/
   display: grid;
@@ -51,11 +53,11 @@ header {
 }
 .parr{
   font-size: xx-large;
-  margin: 7px;
+  margin: 1vw;
 }
 .typing-demo {
   width: 13ch;
-  animation: typing 2.5s steps(10), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(10), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 15px solid;
@@ -97,16 +99,18 @@ h1 {
 }
 .title img{
   width: 10vw;
+  margin-top: 20px;
 }
 .desktop{
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100%;
 }
 .nav a {
   text-decoration: none;
   margin: 0px 10px 0px 68px;
-  color: #00122c;
+  color: #ffffff;
   font-size: 3vw;
 }
 /*.contenedor {
@@ -294,6 +298,155 @@ h1 {
   max-width: 400px;
 }
 
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fondo decorativo */
+.about-me .background-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-me .background-decorations svg {
+  position: absolute;
+  fill: none;
+  stroke-width: 2px;
+  stroke: rgba(247, 247, 247, 0.678);
+  animation: float 2s ease-in-out infinite alternate;
+  filter: blur(3px);
+}
+
+.background-decorations-inicio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.background-decorations-inicio svg{
+  position: absolute;
+  fill: none;
+  stroke: none;
+  stroke-width: 0;
+  animation: float 2s ease-in-out infinite alternate;
+  filter: blur(4px);
+}
+
+/* Animaciones flotantes */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Contenido principal */
+.container {
+  z-index: 2;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.about-text {
+  text-align: center;
+  font-size: x-large;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 100px;
+}
+@keyframes color-cycle {
+  0% { color: #FF5733; }    /* Rojo */
+  12.5% { color: #33FF57; } /* Verde */
+  37.5% { color: #FF33A1; } /* Rosa */
+  50% { color: #FFC300; }   /* Amarillo */
+  62.5% { color: #33FFF3; } /* Turquesa */
+  87.5% { color: #FF8C33; } /* Naranja */
+  100% { color: #FF5733; }  /* Regreso a Rojo */
+}
+
+/* Aplicar animación al span */
+.skills-list li span {
+  display: inline-block;
+  animation: color-cycle 4s infinite linear; /* Cambia colores continuamente */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Sección de habilidades */
+.skills-section {
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.skills-list li svg {
+  flex-shrink: 0;
+}
+
+.certificates-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.certificates-collage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Media query para pantallas de 700px o menos */
 @media (max-width: 700px) {
   body {
@@ -313,10 +466,10 @@ h1 {
   }
   .desktop{
     display: flex;
-    flex-direction: column;
+    flex-direction: flex-start;
   }
   .parr {
-    font-size: medium;
+    font-size: x-large;
     margin: 5px;
   }
 
@@ -329,8 +482,14 @@ h1 {
   }
 
   .nav a {
-    font-size: 7vw; /* Texto más grande para legibilidad */
-    margin: 0 15px; /* Reduce los márgenes */ 
+    font-size: 7vw;
+    margin: 0 15px;
+    color: white;
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #001ce3, 7px 7px 0px rgb(0 0 0 / 20%);
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
 
 
